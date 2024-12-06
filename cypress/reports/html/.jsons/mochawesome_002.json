@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-05T09:15:31.870Z",
+    "end": "2024-12-05T09:16:01.971Z",
+    "duration": 30101,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "599642e5-47bc-436c-be48-32d0e5e86184",
+      "title": "",
+      "fullFile": "cypress\\e2e\\datadriven.cy.js",
+      "file": "cypress\\e2e\\datadriven.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6a02fb9f-927f-4053-b511-040868a61907",
+          "title": "Regression Test for Apollo Pharmacy (Data-Driven from JSON)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Footer and Navigation Links (Data-Driven from JSON)",
+              "fullTitle": "Regression Test for Apollo Pharmacy (Data-Driven from JSON) Footer and Navigation Links (Data-Driven from JSON)",
+              "timedOut": null,
+              "duration": 26434,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Load the data from the JSON fixture file\ncy.fixture('categories.json').then(data => {\n  // Visit the Apollo Pharmacy homepage\n  cy.visit(\"https://www.apollopharmacy.in/\");\n  // Verify the logo is clickable and navigate to the homepage\n  cy.get('.Header_logo__YLshq > .yh').should('be.visible').click();\n  // Verify the first navigation link is present and clickable\n  cy.get('.Header_active__NBhUN > a').should('be.visible').click();\n  // Iterate through categories and click each link\n  data.filter(item => item.link).forEach(category => {\n    // Click on the category link\n    cy.get(`[href='${category.link}']`).should('be.visible').click();\n    // Verify the page URL includes the category link\n    cy.url().should('include', category.link);\n  });\n  // Iterate through product selectors and click each product\n  data.filter(item => item.product).forEach(product => {\n    // Click on the product\n    //  cy.get(product.product).should('be.visible').click();\n    // Verify product interaction consistency (clicking again to test)\n    //cy.get(product.product).should('be.visible').click();\n  });\n  // Verify the footer logo is visible and clickable\n  cy.get('.Footer_footerLogo__isTPQ > a > .yh').click();\n  // Verify that clicking the footer logo navigates to the homepage\n  cy.url().should('eq', 'https://www.apollopharmacy.in/');\n});",
+              "err": {},
+              "uuid": "1d893bfe-aad4-44b9-9b7c-ba8ba1c35b26",
+              "parentUUID": "6a02fb9f-927f-4053-b511-040868a61907",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1d893bfe-aad4-44b9-9b7c-ba8ba1c35b26"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26434,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

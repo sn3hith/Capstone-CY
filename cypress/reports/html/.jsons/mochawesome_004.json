@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-05T09:16:22.248Z",
+    "end": "2024-12-05T09:16:56.810Z",
+    "duration": 34562,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9fca31dc-4484-4a7b-a1d5-8cbdcc9c7436",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pom.cy.js",
+      "file": "cypress\\e2e\\pom.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b7e3bb65-3220-4234-a640-81aec5447256",
+          "title": "Apollo Pharmacy Homepage Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should interact with various elements on the homepage",
+              "fullTitle": "Apollo Pharmacy Homepage Tests should interact with various elements on the homepage",
+              "timedOut": null,
+              "duration": 30269,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// FirstC actions\nconst ln = new _pom.FirstC();\nln.visitHomePage();\nln.clickConsultationImage();\nln.clickSelectAddress();\n// SecondC actions\nconst pr = new _pom.SecondC();\n// pr.clickPincode();\n//pr.typecode();\n//pr.submitPincode();\npr.specialoffers();\n// ThirdC actions\nconst ch = new _pom.ThirdC();\nch.clickSearchBox();\nch.clickCart();\nch.clickgoto();\n// FourthC actions\nconst tr = new _pom.FourthC();\ntr.clickBuyMedicines();\ntr.clickAllProducts();\ntr.clickBabyCare();\n// FifthC actions\nconst tt = new _pom.FifthC();\ntt.clickNds();\ntt.clickWomenCare();\n// tt.clickPersonalcare();",
+              "err": {},
+              "uuid": "01229680-1e18-4b01-8810-b8493a7fdc1e",
+              "parentUUID": "b7e3bb65-3220-4234-a640-81aec5447256",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "01229680-1e18-4b01-8810-b8493a7fdc1e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30269,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
